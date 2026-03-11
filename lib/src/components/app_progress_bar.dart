@@ -3,40 +3,74 @@ import 'package:flutter/material.dart';
 //import 'package:linear_progress_bar/linear_progress_bar.dart';
 
 class AppProgressBar extends StatelessWidget {
-  final int current;
-  final int total;
-  final DmSemanticColor progressColors;
+  final int currentQuestion;
+  final int totalQuestion;
+  final double progress;
+  //final DmSemanticColor progressColors;
 
   const AppProgressBar({
     super.key,
-    required this.progressColors,
-    required this.current,
-    required this.total,
+    //required this.progressColors,
+    required this.currentQuestion,
+    required this.totalQuestion,
+    required this.progress,
   });
 
   @override
   Widget build(BuildContext context) {
-    final progress = current / total;
+    //final progress = currentQuestion / totalQuestion;
 
-    return Row(
-      children: [
-        Text(
-          '$current / $total',
-          style: const TextStyle(fontWeight: FontWeight.w600),
-        ),
-        const SizedBox(width: 12),
-        Expanded(
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(8),
-            child: LinearProgressIndicator(
-              value: progress,
-              minHeight: 8,
-              backgroundColor: Colors.black,
-              valueColor: AlwaysStoppedAnimation(Colors.blue),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      child: Row(
+        children: [
+          Text(
+            '$currentQuestion / $totalQuestion',
+            style: const TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+              color: Color(0xFF1A1A1A),
             ),
           ),
-        ),
-      ],
+
+          const SizedBox(width: 12),
+
+          Expanded(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 400),
+                curve: Curves.easeInOut,
+                height: 8,
+
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    return Stack(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFE5E5E5),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                        ),
+                        AnimatedContainer(
+                          duration: const Duration(milliseconds: 400),
+                          curve: Curves.easeInOut,
+                          width: constraints.maxWidth * progress,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF2ECC40),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
 
     /*   return LinearProgressBar(

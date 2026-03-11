@@ -41,7 +41,7 @@ class _QuestionaryPageState extends State<QuestionaryPage> {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            AppProgressBar(current: 4, total: 10, progressColors: colors),
+            AppProgressBar(currentQuestion: 4, totalQuestion: 10, progress: 40),
             const SizedBox(height: 24),
 
             AppQuestionCard(
