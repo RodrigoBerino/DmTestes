@@ -1,4 +1,4 @@
-![DmTeste Banner](./assets/dm.svg)
+![DmTeste Banner](./assets/1.svg)
 
 **App para provas de retenção coporativa desenvolvido com animações nativas do Flutter e arquitetura MVVM**
 
@@ -43,7 +43,7 @@ O App nasceu da necessidade de tornar as provas de retenção corporativa do sis
 Tarefa de remodelagem e arquiterura de informação do formulário web para smartphones:
 
 <p align="center">
-  <img src="./assets/reed.svg" width="50%"/>
+  <img src="./assets/2.svg" width="750%"/>
 </p>
 
 ---
