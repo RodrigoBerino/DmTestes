@@ -34,11 +34,7 @@ class AppAnswerCard extends StatelessWidget {
         ),
         child: Row(
           children: [
-            AppOptionSelector(
-              selected: selected,
-              activeColor: colors.brandPrimary100,
-              inactiveColor: Colors.grey,
-            ),
+            AppOptionSelector(isSelected: selected, label: 'eu', onTap: onTap),
             const SizedBox(width: 12),
             Expanded(child: Text(text, style: const TextStyle(fontSize: 14))),
           ],

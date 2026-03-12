@@ -7,27 +7,21 @@ class AppHeader extends StatelessWidget implements PreferredSizeWidget {
   final IconData icon;
 
   ///final VoidCallback? onBack;
-  final DmSemanticColor colors;
 
-  const AppHeader({
-    super.key,
-    required this.label,
-    required this.icon,
-    required this.colors,
-  });
+  const AppHeader({super.key, required this.label, required this.icon});
 
   @override
   Size get preferredSize => const Size.fromHeight(64);
 
   Widget build(BuildContext context) {
     return Container(
-      color: colors.backgroundHeader,
+      color: Color(0xFF212121),
       child: SafeArea(
         bottom: false,
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: SizedBox(
-            height: 64,
+            height: 48,
             child: Row(
               children: [
                 IconButton(
@@ -35,13 +29,13 @@ class AppHeader extends StatelessWidget implements PreferredSizeWidget {
                   constraints: const BoxConstraints(),
                   onPressed: () {},
                   iconSize: 24,
-                  icon: Icon(Icons.arrow_back, color: colors.brandPrimary10),
+                  icon: Icon(Icons.arrow_back, color: Colors.green),
                 ),
                 const SizedBox(width: 16),
                 Text(
                   label,
                   style: TextStyle(
-                    color: colors.textBtn,
+                    color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
                   ),

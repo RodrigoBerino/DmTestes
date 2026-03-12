@@ -22,10 +22,10 @@ class AppOptionSelector extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         decoration: BoxDecoration(
           color: isSelected ? const Color(0xFFE8F5E9) : Colors.white,
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(8),
           border: Border.all(
             color: isSelected
-                ? const Color(0xFF2ECC40)
+                ? const Color(0XFF28a745)
                 : const Color(0xFFE0E0E0),
             width: isSelected ? 2 : 1,
           ),
@@ -42,7 +42,7 @@ class AppOptionSelector extends StatelessWidget {
                 shape: BoxShape.circle,
                 border: Border.all(
                   color: isSelected
-                      ? const Color(0xFF2ECC40)
+                      ? const Color(0XFF28a745)
                       : const Color(0xFFBDBDBD),
                   width: 2,
                 ),
@@ -55,7 +55,7 @@ class AppOptionSelector extends StatelessWidget {
                         height: 12,
                         decoration: const BoxDecoration(
                           shape: BoxShape.circle,
-                          color: Color(0xFF2ECC40),
+                          color: Color(0XFF28a745),
                         ),
                       ),
                     )

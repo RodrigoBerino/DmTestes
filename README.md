@@ -1,16 +1,69 @@
-# dmtestes
+![Frota DS Banner](./assets/new_banner.svg)
 
-A new Flutter project.
+**App de prova de retenção desenvolvido com animações nativas do Flutter e arquitetura MVVM!**
 
-## Getting Started
+App Flutter para aplicação de questionários de retenção de conhecimento corporativo, com navegação por **gestos de swipe** estilo Tinder, construído inteiramente com os recursos nativos de animação do Flutter — sem bibliotecas externas de animação.
 
-This project is a starting point for a Flutter application.
+O App foi desenvolvido usando a **arquitetura MVVM (Model-View-ViewModel)**, separando a View (widgets e interface), ViewModel (lógica de navegação e estado do quiz) e Model (dados das questões).
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 1. Rode esse projeto
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Siga estes passos para iniciar o projeto localmente:
+
+**a) Clone o repositório**
+
+```bash
+git clone git@github.com:RodrigoBerino/dmtestes.git
+```
+
+**b) Comandos**
+
+```bash
+cd dmtestes
+
+flutter pub get
+
+flutter run
+```
+
+---
+
+### 2. Problemática do projeto
+
+O App nasceu da necessidade de tornar provas de retenção corporativa mais engajantes e intuitivas, saindo do modelo tradicional de formulários estáticos.
+
+- A ideia central é navegar entre questões com **swipe horizontal**, assim como apps de cards populares;
+- O usuário pode avançar ou voltar entre questões tanto pelo gesto quanto pelos botões;
+- Cada troca de card é acompanhada de animações de saída (easeIn), entrada (easeOut) e retorno elástico (elasticOut) quando o swipe não atinge o threshold;
+- O progresso é exibido visualmente com uma barra animada que atualiza a cada troca de questão.
+
+---
+
+### 3. Animações nativas do Flutter
+
+Todas as animações foram implementadas com as APIs nativas do Flutter — `AnimationController`, `AnimatedBuilder`, `Tween`, `CurvedAnimation` e `AnimatedContainer` — sem nenhuma dependência externa de animação.
+
+| Animação              | Duração  | Curva      | Onde ocorre                                |
+| --------------------- | -------- | ---------- | ------------------------------------------ |
+| Saída do card (swipe) | 300ms    | easeIn     | Card sai da tela ao ser arrastado          |
+| Retorno ao centro     | variável | elasticOut | Swipe incompleto volta com efeito elástico |
+| Entrada do novo card  | 350ms    | easeOut    | Slide + fade-in da próxima questão         |
+| Seleção de opção      | 250ms    | easeInOut  | Transição visual do botão selecionado      |
+| Barra de progresso    | 400ms    | easeInOut  | Atualização do progresso entre questões    |
+| Rotação e opacidade   | —        | —          | Card rotaciona e esmaece durante o arrasto |
+
+---
+
+### 4. Tecnologias
+
+- Flutter
+- Dart
+- Material Design 3
+- Google Fonts (Inter)
+- Arquitetura MVVM
+- Animações nativas (AnimationController, Tween, CurvedAnimation)
+- Gerenciamento de estado com ChangeNotifier (sem pacotes externos)
+
+---

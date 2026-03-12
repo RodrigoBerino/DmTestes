@@ -58,7 +58,7 @@ class AppProgressBar extends StatelessWidget {
                           curve: Curves.easeInOut,
                           width: constraints.maxWidth * progress,
                           decoration: BoxDecoration(
-                            color: const Color(0xFF2ECC40),
+                            color: const Color(0XFF28a745),
                             borderRadius: BorderRadius.circular(4),
                           ),
                         ),

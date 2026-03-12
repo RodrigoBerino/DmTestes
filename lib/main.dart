@@ -1,6 +1,5 @@
+import 'package:dmtestes/src/pages/questionary_page.dart';
 import 'package:flutter/material.dart';
-import 'src/core/app_color.dart';
-import 'src/pages/questionary_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,16 +10,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = DmSemanticColor.light();
-
     return MaterialApp(
+      title: 'Prova de Retenção',
       debugShowCheckedModeBanner: false,
-      title: 'DM Testes',
       theme: ThemeData(
-        scaffoldBackgroundColor: colors.backgroundPrimary,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF2ECC40),
+          brightness: Brightness.light,
+        ),
         useMaterial3: true,
+        fontFamily: 'Roboto',
       ),
-      home: QuestionaryPage(colorsDm: colors),
+      home: const QuestionaryPage(),
     );
   }
 }
