@@ -1,3 +1,4 @@
+import 'package:dmtestes/src/core/app_color.dart';
 import 'package:flutter/material.dart';
 
 class AppOptionSelector extends StatelessWidget {
@@ -21,12 +22,10 @@ class AppOptionSelector extends StatelessWidget {
         curve: Curves.easeInOut,
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         decoration: BoxDecoration(
-          color: isSelected ? const Color(0xFFE8F5E9) : Colors.white,
+          color: isSelected ? DmColor.apple100 : DmColor.white,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
-            color: isSelected
-                ? const Color(0XFF28a745)
-                : const Color(0xFFE0E0E0),
+            color: isSelected ? DmColor.apple600 : DmColor.gray200,
             width: isSelected ? 2 : 1,
           ),
         ),
@@ -41,9 +40,7 @@ class AppOptionSelector extends StatelessWidget {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: isSelected
-                      ? const Color(0XFF28a745)
-                      : const Color(0xFFBDBDBD),
+                  color: isSelected ? DmColor.apple600 : DmColor.gray300,
                   width: 2,
                 ),
                 color: Colors.transparent,
@@ -55,7 +52,7 @@ class AppOptionSelector extends StatelessWidget {
                         height: 12,
                         decoration: const BoxDecoration(
                           shape: BoxShape.circle,
-                          color: Color(0XFF28a745),
+                          color: DmColor.apple600,
                         ),
                       ),
                     )
@@ -70,7 +67,7 @@ class AppOptionSelector extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
-                  color: const Color(0xFF333333),
+                  color: DmColor.gray700,
                 ),
               ),
             ),

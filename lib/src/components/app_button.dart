@@ -41,7 +41,7 @@ class AppButton extends StatelessWidget {
               width: 20,
               child: CircularProgressIndicator(
                 strokeWidth: 2,
-                color: Colors.white,
+                color: DmColor.white,
               ),
             )
           : Row(
@@ -49,13 +49,13 @@ class AppButton extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               children: [
                 if (icon != null) ...[
-                  Icon(icon, size: 20, color: Colors.white),
+                  Icon(icon, size: 20, color: DmColor.white),
                   const SizedBox(width: 8),
                 ],
                 Text(
                   label,
                   style: const TextStyle(
-                    color: Colors.white,
+                    color: DmColor.white,
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
                   ),

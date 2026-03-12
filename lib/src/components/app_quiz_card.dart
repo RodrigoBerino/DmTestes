@@ -1,5 +1,6 @@
 import 'package:dmtestes/src/components/app_option_selector.dart';
 import 'package:dmtestes/src/components/app_quiz_question.dart';
+import 'package:dmtestes/src/core/app_color.dart';
 import 'package:flutter/material.dart';
 
 class AppQuizCard extends StatefulWidget {
@@ -174,11 +175,11 @@ class _AppQuizCardState extends State<AppQuizCard>
           margin: const EdgeInsets.symmetric(horizontal: 20),
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
-            color: Color(0xFFE7E7E7),
+            color: DmColor.gray200,
             borderRadius: BorderRadius.circular(8),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.08),
+                color: DmColor.black.withValues(alpha: 0.08),
                 blurRadius: 20,
                 offset: const Offset(0, 4),
               ),
@@ -196,7 +197,7 @@ class _AppQuizCardState extends State<AppQuizCard>
                   style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
-                    color: Color(0xFF1A1A1A),
+                    color: DmColor.gray950,
                     height: 1.4,
                   ),
                 ),

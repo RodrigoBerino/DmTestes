@@ -43,7 +43,7 @@ O App nasceu da necessidade de tornar as provas de retenção corporativa do sis
 Tarefa de remodelagem e arquiterura de informação do formulário web para smartphones:
 
 <p align="center">
-  <img src="./assets/2.svg" width="750%"/>
+  <img src="./assets/2.svg" width="75%"/>
 </p>
 
 ---

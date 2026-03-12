@@ -1,4 +1,4 @@
-//import 'package:dmtestes/src/core/app_color.dart';
+import 'package:dmtestes/src/core/app_color.dart';
 import 'package:flutter/material.dart';
 //import 'package:linear_progress_bar/linear_progress_bar.dart';
 
@@ -29,7 +29,7 @@ class AppProgressBar extends StatelessWidget {
             style: const TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w700,
-              color: Color(0xFF1A1A1A),
+              color: DmColor.gray950,
             ),
           ),
 
@@ -49,7 +49,7 @@ class AppProgressBar extends StatelessWidget {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                            color: const Color(0xFFE5E5E5),
+                            color: DmColor.gray200,
                             borderRadius: BorderRadius.circular(4),
                           ),
                         ),
@@ -58,7 +58,7 @@ class AppProgressBar extends StatelessWidget {
                           curve: Curves.easeInOut,
                           width: constraints.maxWidth * progress,
                           decoration: BoxDecoration(
-                            color: const Color(0XFF28a745),
+                            color: DmColor.apple600,
                             borderRadius: BorderRadius.circular(4),
                           ),
                         ),

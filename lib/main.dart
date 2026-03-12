@@ -1,3 +1,4 @@
+import 'package:dmtestes/src/core/app_color.dart';
 import 'package:dmtestes/src/pages/questionary_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF2ECC40),
+          seedColor: DmColor.apple600,
           brightness: Brightness.light,
         ),
         useMaterial3: true,

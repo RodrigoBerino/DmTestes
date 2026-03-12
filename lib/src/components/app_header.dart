@@ -15,7 +15,7 @@ class AppHeader extends StatelessWidget implements PreferredSizeWidget {
 
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xFF212121),
+      color: DmColor.gray950,
       child: SafeArea(
         bottom: false,
         child: Padding(
@@ -29,13 +29,13 @@ class AppHeader extends StatelessWidget implements PreferredSizeWidget {
                   constraints: const BoxConstraints(),
                   onPressed: () {},
                   iconSize: 24,
-                  icon: Icon(Icons.arrow_back, color: Colors.green),
+                  icon: Icon(Icons.arrow_back, color: DmColor.apple600),
                 ),
                 const SizedBox(width: 16),
                 Text(
                   label,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: DmColor.white,
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
                   ),

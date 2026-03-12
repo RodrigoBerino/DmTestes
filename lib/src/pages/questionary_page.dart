@@ -177,16 +177,16 @@ class _QuestionaryPageState extends State<QuestionaryPage>
       margin: const EdgeInsets.symmetric(horizontal: 20),
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: DmColor.white,
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.06),
+            color: DmColor.black.withValues(alpha: 0.06),
             blurRadius: 24,
             offset: const Offset(0, 6),
           ),
           BoxShadow(
-            color: Colors.black.withOpacity(0.03),
+            color: DmColor.black.withValues(alpha: 0.03),
             blurRadius: 6,
             offset: const Offset(0, 2),
           ),
@@ -200,7 +200,7 @@ class _QuestionaryPageState extends State<QuestionaryPage>
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.w800,
-              color: Color(0xFF1A1A1A),
+              color: DmColor.gray950,
             ),
           ),
           const SizedBox(height: 12),
@@ -210,7 +210,7 @@ class _QuestionaryPageState extends State<QuestionaryPage>
             style: TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w400,
-              color: Color(0xFF666666),
+              color: DmColor.gray500,
               height: 1.5,
             ),
           ),
@@ -221,9 +221,9 @@ class _QuestionaryPageState extends State<QuestionaryPage>
             height: 80,
             decoration: const BoxDecoration(
               shape: BoxShape.circle,
-              color: Color(0XFF28a745),
+              color: DmColor.apple600,
             ),
-            child: const Icon(Icons.check, color: Colors.white, size: 44),
+            child: const Icon(Icons.check, color: DmColor.white, size: 44),
           ),
           const SizedBox(height: 36),
           //  Continuar
@@ -233,8 +233,8 @@ class _QuestionaryPageState extends State<QuestionaryPage>
             child: ElevatedButton(
               onPressed: _onContinuePressed,
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0XFF28a745),
-                foregroundColor: Colors.white,
+                backgroundColor: DmColor.apple600,
+                foregroundColor: DmColor.white,
                 elevation: 0,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
@@ -272,7 +272,7 @@ class _QuestionaryPageState extends State<QuestionaryPage>
     ).animate(CurvedAnimation(parent: _enterController, curve: Curves.easeOut)); */
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F5F5),
+      backgroundColor: DmColor.gray100,
 
       body: Column(
         children: [
@@ -391,16 +391,16 @@ class _QuestionaryPageState extends State<QuestionaryPage>
                           ),
                         ),
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: const Color(0xFF333333),
+                          foregroundColor: DmColor.gray700,
                           side: BorderSide(
                             color: _viewModel.canGoBack
-                                ? const Color(0xFFBDBDBD)
-                                : const Color(0xFFE0E0E0),
+                                ? DmColor.gray300
+                                : DmColor.gray200,
                           ),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),
-                          disabledForegroundColor: const Color(0xFFBDBDBD),
+                          disabledForegroundColor: DmColor.gray300,
                         ),
                       ),
                     ),
@@ -413,8 +413,8 @@ class _QuestionaryPageState extends State<QuestionaryPage>
                       child: ElevatedButton(
                         onPressed: _onNextPressed,
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0XFF28a745),
-                          foregroundColor: Colors.white,
+                          backgroundColor: DmColor.apple600,
+                          foregroundColor: DmColor.white,
                           elevation: 0,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
@@ -457,16 +457,16 @@ class _QuestionaryPageState extends State<QuestionaryPage>
       margin: const EdgeInsets.symmetric(horizontal: 20),
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: DmColor.white,
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.06),
+            color: DmColor.black.withValues(alpha: 0.06),
             blurRadius: 24,
             offset: const Offset(0, 6),
           ),
           BoxShadow(
-            color: Colors.black.withOpacity(0.03),
+            color: DmColor.black.withValues(alpha: 0.03),
             blurRadius: 6,
             offset: const Offset(0, 2),
           ),
@@ -484,7 +484,7 @@ class _QuestionaryPageState extends State<QuestionaryPage>
               style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
-                color: Color(0xFF1A1A1A),
+                color: DmColor.gray950,
                 height: 1.4,
               ),
             ),
