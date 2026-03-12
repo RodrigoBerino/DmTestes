@@ -1,4 +1,4 @@
-import 'package:dmtestes/src/core/app_color.dart';
+//import 'package:dmtestes/src/core/app_color.dart';
 import 'package:flutter/material.dart';
 //import 'package:linear_progress_bar/linear_progress_bar.dart';
 

@@ -1,5 +1,5 @@
 import 'package:dmtestes/src/core/app_color.dart';
-import 'package:dmtestes/src/core/app_type.dart';
+//import 'package:dmtestes/src/core/app_type.dart';
 import 'package:flutter/material.dart';
 
 class AppHeader extends StatelessWidget implements PreferredSizeWidget {
